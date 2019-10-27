@@ -6,12 +6,28 @@ O presente projeto foi feito como estudo de desenvolvimento WEB, bem como para f
 
 Todas as informações exibidas pertencem a [Jambô Editora](https://jamboeditora.com.br/). E caso solicitado será removido imediatamente. Apoiem os criadores adquirindo o livro.
 
+## Índice
+
+1. [Tecnologias Utilizadas](#tecnologias-utilizadas)
+2. [Demo](#demo)
+3. [Instalação](#tecnologias-utilizadas)
+4. [Rotas](#rotas)
+    1. [Observações](#observacoes)
+    2. [Classes](#classes)
+    3. [Divindades](#divindades)
+    4. [Habilidades](#habilidades)
+    5. [Raças](#racas)
+    6. [Perícias](#pericias)
+
 ## Tecnologias Utilizadas
 - [React.js com hooks](https://reactjs.org/);
 - [Styled Components](https://www.styled-components.com/);
 - [Axios](https://github.com/axios/axios);
 - [React Json View](https://www.npmjs.com/package/react-json-view);
 - [Repositório da API](https://github.com/guipolitano/api-tormenta20);
+
+## Demo
+-[Link para Demonstração](https://api-tormenta20.herokuapp.com/)
 
 ## Instalação
 
