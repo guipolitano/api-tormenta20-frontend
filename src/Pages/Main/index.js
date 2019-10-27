@@ -60,6 +60,16 @@ export default function Main() {
             <H1>Bem vindo a API de Tormenta 20</H1>
             <hr />
             <p>
+              Manual de como utilizar&nbsp;
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/guipolitano/api-tormenta20-frontend#rotas"
+              >
+                AQUI
+              </a>
+            </p>
+            <p>
               Este é um sistema <u>não-oficial</u> feito com base no Sistema de
               RPG Tormenta 20.
             </p>
@@ -70,7 +80,11 @@ export default function Main() {
             </p>
             <p>
               Todas as informações exibidas pertencem a&nbsp;
-              <a target="_blank" rel="noopener noreferrer" href="https://jamboeditora.com.br/">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://jamboeditora.com.br/"
+              >
                 Jambô Editora
               </a>
               . E caso solicitado será removido imediatamente. Apoiem os

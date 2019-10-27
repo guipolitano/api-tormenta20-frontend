@@ -10,14 +10,14 @@ Todas as informações exibidas pertencem a [Jambô Editora](https://jamboeditor
 
 1. [Tecnologias Utilizadas](#tecnologias-utilizadas)
 2. [Demo](#demo)
-3. [Instalação](#tecnologias-utilizadas)
+3. [Instalação](#instalação)
 4. [Rotas](#rotas)
-    1. [Observações](#observacoes)
+    1. [Observações](#observações)
     2. [Classes](#classes)
     3. [Divindades](#divindades)
     4. [Habilidades](#habilidades)
-    5. [Raças](#racas)
-    6. [Perícias](#pericias)
+    5. [Raças](#raças)
+    6. [Perícias](#perícias)
 
 ## Tecnologias Utilizadas
 - [React.js com hooks](https://reactjs.org/);
