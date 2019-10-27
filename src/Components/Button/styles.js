@@ -11,4 +11,7 @@ export const Button = styled.button`
     &:hover {
         opacity: 0.7;
     }
+    display: flex;
+    justify-content: center;
+    flex: 1;
 `;

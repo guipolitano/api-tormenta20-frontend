@@ -87,8 +87,8 @@ export default function Main() {
               >
                 Jambô Editora
               </a>
-              . E caso solicitado será removido imediatamente. Apoiem os
-              criadores adquirindo o livro.
+              &nbsp;e caso solicitado o site será removido imediatamente. Apoiem
+              os criadores adquirindo o livro.
             </p>
           </CardHeader>
           <hr />
