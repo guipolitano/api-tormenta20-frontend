@@ -11,13 +11,11 @@ export const Container = styled.div`
   * {
     font-family: "Germania One", cursive;
   }
-`;
-
-export const H1 = styled.h1`
-  display: flex;
-  border-left: 3px solid #d25b35;
-  padding-left: 6px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
+  hr{
+    opacity: 0.2;
+    border-radius: 2px;
+    width: 90%;
+    border: 2px solid #e2dbbe;
+  }
 `;
 

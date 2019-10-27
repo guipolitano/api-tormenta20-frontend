@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tormenta 20 API - Frontend
 
-## Available Scripts
+Este é um sistema não-oficial feito com base no Sistema de RPG Tormenta 20.
 
-In the project directory, you can run:
+O presente projeto foi feito como estudo de desenvolvimento WEB, bem como para facilitar a consulta dos recursos básicos do Sistema.
 
-### `yarn start`
+Todas as informações exibidas pertencem a [Jambô Editora](https://jamboeditora.com.br/). E caso solicitado será removido imediatamente. Apoiem os criadores adquirindo o livro.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tecnologias Utilizadas
+- [React.js com hooks](https://reactjs.org/);
+- [Styled Components](https://www.styled-components.com/);
+- [Axios](https://github.com/axios/axios);
+- [React Json View](https://www.npmjs.com/package/react-json-view);
+- [Repositório da API](https://github.com/guipolitano/api-tormenta20);
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Instalação
 
-### `yarn test`
+Clone o projeto e use o npm ou yarn para instalar as dependencias
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
+```bash
+yarn install
+```
 
-### `yarn build`
+## Rotas
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Observações:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Os atributos precedidos de dois-pontos(:) são parâmetros a serem passados na rota;
+- As palavras compostas serão separadas com underline(_);
+- Acentos não são aceitos nas rotas;
+- Todas as rotas são do tipo GET;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Atualmente o projeto suporta as seguintes rotas:
 
-### `yarn eject`
+#### Classes:
+- "/classes" - Retorna todas as Classes;
+- "/classes/:classe" - Retorna a classe do parâmetro. Ex.: classes/barbaro;
+- "/classes/:classe/habilidades" - Retorna as Habilidades da classe do parâmetro. Ex.: classes/barbaro/habilidades;
+- "/classes/:classe/tabela-nivel" - Retorna as Tabela de Nível da classe do parâmetro. Ex.: classes/barbaro/tabela-nivel;
+- "/classes/:classe/proeficiencias/" - Retorna as Proeficiências da classe do parâmetro. Ex.: classes/barbaro/proeficiencias;
+- "/classes/:classe/pericias/" - Retorna as Perícias da classe do parâmetro. Ex.: classes/barbaro/pericias;
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Divindades:
+- "/divindades" - Retorna todas as Divindades;
+- "/divindades/:divindade" - Retorna a divindade do parâmetro. Ex.: divindade/valkaria;
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Habilidades:
+- "/habilidades" - Retorna todas as Habilidades;
+- "/habilidades/:habilidade" - Retorna a habilidade do parâmetro. Ex.: habilidade/alta_arcana;
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Raças:
+- "/racas" - Retorna todas as Raças;
+- "/racas/:raca" - Retorna a raça do parâmetro. Ex.: racas/humano;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### Perícias:
+- "/pericias" - Retorna todas as Perícias;
+- "/pericias/:pericia" - Retorna a perícia do parâmetro. Ex.: pericias/atletismo;

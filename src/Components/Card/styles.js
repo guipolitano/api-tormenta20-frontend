@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-  max-height: 80%;
+  max-height: 40%;
   overflow-y: auto;
   display: flex;
   padding: 10px 10px;

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Label = styled.label`
-  color: white;
+  color: #e2dbbe;
+  font-size: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;

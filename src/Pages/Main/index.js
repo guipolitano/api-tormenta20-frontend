@@ -1,15 +1,25 @@
 import React, { useState, useEffect } from "react";
 import ReactJson from "react-json-view";
 import axios from "axios";
-import { Loader, Card, Label, LabelPrepend, Button } from "../../Components";
+import {
+  Loader,
+  Card,
+  Label,
+  LabelPrepend,
+  Button,
+  H1,
+  SubText,
+  CardHeader
+} from "../../Components";
 
-import { Container, H1 } from "./styles";
+import { Container } from "./styles";
 
 export default function Main() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(null);
   const [search, setSearch] = useState("classes");
   const [result, setResult] = useState("SUCESSO");
+  const [title, setTitle] = useState("Resultado para classes");
 
   useEffect(() => {
     axios
@@ -25,49 +35,73 @@ export default function Main() {
     axios
       .get(`https://tormenta20-api.herokuapp.com/api/${search}`)
       .then(response => {
-          setData(response.data);
-          setResult("SUCESSO")
-          setLoading(false);
+        setData(response.data);
+        setResult("SUCESSO");
+        setTitle(`Resultado para ${search}`);
+        setLoading(false);
       })
       .catch(error => {
         setResult("ERRO");
-        setData({});
+        setTitle(`Resultado para ${search}`);
+        setData({
+          message:
+            "Rota não encontrada, olhe a documentação para ver as rotas disponíveis",
+          data: []
+        });
         setLoading(false);
       });
   };
-
-  const handleInput = event => {
-    setSearch(event.target.value);
-  };
-
-  const handleEnter = event => event.key === "Enter" ? handleSearch() : null;
 
   return (
     <>
       <Container>
         <Card>
+          <CardHeader>
+            <H1>Bem vindo a API de Tormenta 20</H1>
+            <hr />
+            <p>
+              Este é um sistema <u>não-oficial</u> feito com base no Sistema de
+              RPG Tormenta 20.
+            </p>
+            <p>
+              O presente projeto foi feito como estudo de desenvolvimento WEB,
+              bem como para facilitar a consulta dos recursos básicos do
+              Sistema.
+            </p>
+            <p>
+              Todas as informações exibidas pertencem a&nbsp;
+              <a target="_blank" rel="noopener noreferrer" href="https://jamboeditora.com.br/">
+                Jambô Editora
+              </a>
+              . E caso solicitado será removido imediatamente. Apoiem os
+              criadores adquirindo o livro.
+            </p>
+          </CardHeader>
+          <hr />
           <Label text="Insira o que deseja procurar" />
           <LabelPrepend
-            text={<i>https://tormenta20-api.herokuapp.com/api/</i>}
+            text={<i>tormenta20-api.herokuapp.com/api/</i>}
             placeholder="classes, racas, pericias, divindades..."
             value={search}
-            onKeyDown={handleEnter}
-            onChange={handleInput}
+            onKeyDown={event => (event.key === "Enter" ? handleSearch() : null)}
+            onChange={event => setSearch(event.target.value)}
           >
             <Button
               text="Pesquisar"
-              color="#0088c7"
+              color="#e2dbbe"
               margin="0px 0px 0px 10px"
               onClick={handleSearch}
             />
           </LabelPrepend>
+          <SubText text="Ex.: 'classes', 'classes/barbaro', 'classes/barbaro/tabela', 'racas', etc" />
         </Card>
         <Card>
           {!loading ? (
             <>
-              <H1>Resultado</H1>
+              <H1>{title}</H1>
+              <hr />
               <ReactJson
-                collapsed={true}
+                collapsed={2}
                 collapseStringsAfterLength={50}
                 src={data}
                 name={result}
