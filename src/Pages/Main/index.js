@@ -64,7 +64,7 @@ export default function Main() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://github.com/guipolitano/api-tormenta20-frontend#rotas"
+                href="https://github.com/guipolitano/api-tormenta20-frontend/blob/master/README.md#rotas"
               >
                 AQUI
               </a>
@@ -107,7 +107,7 @@ export default function Main() {
               onClick={handleSearch}
             />
           </LabelPrepend>
-          <SubText text="Ex.: 'classes', 'classes/barbaro', 'classes/barbaro/tabela', 'racas', etc" />
+          <SubText text="Ex.: 'classes', 'classes/barbaro', 'classes/barbaro/pericias', 'racas', etc" />
         </Card>
         <Card>
           {!loading ? (
