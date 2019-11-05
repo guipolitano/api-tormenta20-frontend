@@ -16,8 +16,9 @@ Todas as informações exibidas pertencem a [Jambô Editora](https://jamboeditor
     2. [Classes](#classes)
     3. [Divindades](#divindades)
     4. [Habilidades](#habilidades)
-    5. [Raças](#raças)
-    6. [Perícias](#perícias)
+    5. [Origens](#origens)
+    6. [Raças](#raças)
+    7. [Perícias](#perícias)
 
 ## Tecnologias Utilizadas
 - [React.js com hooks](https://reactjs.org/);
@@ -66,6 +67,10 @@ Atualmente o projeto suporta as seguintes rotas:
 #### Habilidades:
 - "/habilidades" - Retorna todas as Habilidades;
 - "/habilidades/:habilidade" - Retorna a habilidade do parâmetro. Ex.: habilidade/alta_arcana;
+
+#### Origens:
+- "/origens" - Retorna todas as Origens;
+- "/origens/:origem" - Retorna a origem do parâmetro. Ex.: origens/artesao;
 
 #### Raças:
 - "/racas" - Retorna todas as Raças;
