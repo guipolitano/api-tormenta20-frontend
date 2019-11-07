@@ -15,7 +15,8 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img.attrs({
-  src: logo
+  src: logo,
+  alt: "Logo Tormenta20"
 })`
   height:100%;
 `;
